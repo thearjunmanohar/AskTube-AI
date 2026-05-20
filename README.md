@@ -102,6 +102,7 @@ AskTube LLM/
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author 
 
 Developed by Arjun Manohar
+Linkedin Profile : www.linkedin.com/in/thearjunmanohar
