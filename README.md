@@ -6,99 +6,198 @@ The application automatically extracts video transcripts, converts them into emb
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
-- 🔗 Accepts YouTube video URLs
-- 📝 Fetches and processes video transcripts automatically
-- 🧠 Uses Retrieval-Augmented Generation (RAG)
-- 📚 ChromaDB-based vector storage
+- 🔗 YouTube URL transcript extraction
+- 📄 Upload custom transcript `.txt` files
+- 🧠 Retrieval-Augmented Generation (RAG)
+- 📚 ChromaDB vector database integration
 - 🤖 Local LLM inference using Ollama
-- 💬 Interactive Streamlit chat interface
-- ✂️ Intelligent text chunking for retrieval optimization
-- 📂 Supports transcript file uploads
-- ⚡ Fast semantic search and contextual response generation
+- 💬 Interactive AI chat interface
+- ⚡ Semantic similarity search
+- ✂️ Recursive text chunking
+- 🎨 Custom futuristic Streamlit UI
+- 📜 Transcript preview panel
+- ⚙️ Configurable embedding and LLM models
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 - Streamlit
 
-### Backend / AI
+## Backend / AI
 - Python
 - LangChain
 - Ollama
+
+## Vector Database
 - ChromaDB
 
-### NLP & Retrieval
-- Recursive Character Text Splitter
-- Vector Embeddings
-- Semantic Search
-- RetrievalQA Chain
+## NLP / Retrieval
+- RecursiveCharacterTextSplitter
+- Semantic Embeddings
+- RetrievalQA
 
-### APIs
+## APIs
 - YouTube Transcript API
 
 ---
 
-## 📌 System Workflow
+# 🧠 System Workflow
 
-1. User submits a YouTube URL or transcript file
-2. Transcript is extracted using YouTube Transcript API
-3. Text is split into manageable chunks
-4. Chunks are converted into embeddings
-5. Embeddings are stored in ChromaDB
-6. User asks questions in natural language
-7. Relevant chunks are retrieved semantically
-8. LLM generates context-aware responses
-
----
-
-## 🧠 Core Concepts Used
-
-1. Retrieval-Augmented Generation (RAG)
-2. Semantic Search
-3. Vector Databases
-4. Embedding Models
-5. Large Language Models (LLMs)
-6. Context Retrieval
-7. Prompt Augmentation
+```text
+User Input
+   ↓
+YouTube Transcript Extraction
+   ↓
+Text Chunking
+   ↓
+Embedding Generation
+   ↓
+ChromaDB Vector Storage
+   ↓
+Semantic Retrieval
+   ↓
+LLM Response Generation
+```
 
 ---
 
-## 📈 Future Improvements
-
-1. Multi-video knowledge base
-2. Conversation memory
-3. PDF and document support
-4. Whisper-based audio transcription
-5. Source citation in responses
-   
----
-
-## 🎯 Use Cases
-
-1. Educational video assistants
-2. AI-powered lecture summarization
-3. Research content exploration
-4. Technical tutorial Q&A
-5. Knowledge extraction from long videos
-
----
-
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```bash
-AskTube LLM/
+AskTube-AI/
 │
-├── app.py                     # Streamlit frontend
-├── rag_engine.py              # RAG pipeline and RetrievalQA logic
-├── transcript_fetcher.py      # Transcript extraction utilities
-├── requirements.txt           # Project dependencies
-├── chroma_db/                 # Persistent vector database
-
+├── asktube_app.py        # Main Streamlit application
+├── requirements.txt      # Dependencies
+├── chroma_db/            # Persistent vector database
+└── README.md
 ```
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/yourusername/asktube-ai.git
+cd asktube-ai
+```
+
+---
+
+## 2️⃣ Create Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🦙 Setup Ollama
+
+Install Ollama from:
+
+https://ollama.com/
+
+Pull required models:
+
+```bash
+ollama pull nomic-embed-text:latest
+ollama pull llama3.2:3b
+```
+
+---
+
+# ▶️ Run Application
+
+```bash
+streamlit run asktube_app.py
+```
+
+---
+
+# 🎯 Usage
+
+## Option 1 — YouTube URL
+
+1. Paste a YouTube video URL
+2. Click **Fetch & Load**
+3. Wait for vector indexing
+4. Start asking questions
+
+---
+
+## Option 2 — Upload Transcript
+
+1. Upload a `.txt` transcript file
+2. Wait for indexing
+3. Ask context-aware questions
+
+---
+
+# 🧩 Core AI Concepts Used
+
+- Retrieval-Augmented Generation (RAG)
+- Vector Databases
+- Semantic Search
+- Embedding Models
+- Prompt Engineering
+- LLM Grounding
+- Context Retrieval Pipelines
+
+---
+
+# ⚡ Current Limitations
+
+- Requires Ollama running locally
+- Streamlit Cloud deployment does not support local Ollama inference
+- English transcript support prioritized
+- Long transcripts may increase embedding time
+
+---
+
+# 🔮 Future Improvements
+
+- Multi-video knowledge base
+- Conversation memory
+- PDF support
+- Whisper audio transcription
+- Source citations
+- Cloud LLM integration (Groq/OpenAI/Gemini)
+- Authentication system
+- Streaming AI responses
+
+---
+
+# 📸 UI Highlights
+
+- Futuristic dark-themed interface
+- Fully customized Streamlit styling
+- Interactive transcript preview
+- Dynamic chain status indicators
+- Real-time chat interface
 
 ---
 
