@@ -83,8 +83,8 @@ AskTube-AI/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/asktube-ai.git
-cd asktube-ai
+git clone https://github.com/thearjunmanohar/AskTube-AI.git
+cd AskTube-AI
 ```
 
 ---
